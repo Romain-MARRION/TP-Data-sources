@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 import logging
 import sys
+import requests
 
 app = Flask(__name__)
 
@@ -33,8 +34,35 @@ def logger():
     """
     return 'console'+page
 
+## textbox
+@app.route('/textbox')
+def home():
+    page="""
+    <head>
+    <meta charset="UTF-8">
+    <title>
+        Textbox
+    </title>
+</head>
+<body>
+<p>
+            this is a Textbox
+        </p>
+    <form name='form' method="get">
+        
+        <input name= "t1"  placeholder="Text">
+        <input type=submit>
+    </form>
+    
+</body>
+    """
+    return page
 
 
+@app.route('/google',methods=["GET"])
+def request_google():
+    req =requests.get("https://analytics.google.com/analytics/web/#/p344224094/reports/reportinghub?params=_u..nav%3Dmaui")
 
+    return req.text
 
 
