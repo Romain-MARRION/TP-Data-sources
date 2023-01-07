@@ -1,0 +1,1 @@
+{"id":"b3b80c8d-8e1a-4891-b61d-a31828b68398","space":40515,"runtime":"python3.9","name":"TP2","path":"p18z3i","project":"a0vzpoje","account":"144798365827","region":"eu-central-1","deps":["flask","requests","pytrends","requires.io","pybase64","matplotlib","pandas"],"envs":null,"public":true,"log_level":"debug","cron":""}
